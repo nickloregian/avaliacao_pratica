@@ -1,0 +1,135 @@
+/*importação de fontes externas*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+/* definição da fonte, cor da fonte, cor do fundo e margem da página inteira */
+body {
+    margin: -1% 0 0 0;
+    font-family: 'Raleway', sans-serif;
+    background-color: rgb(249, 217, 239);
+    color: #8dd1a7;
+}
+
+/* definição da fonte para títulos da página inteira */
+h1, h2 {
+    font-family: 'Merriweather', serif;
+}
+
+/* definição da cor de fundo, cor das fontes, alinhamento e margens (interna e externa) do cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 3%;
+    padding: 2%;
+    background-color: #ff69d7;
+    color: rgb(0, 0, 0);
+}
+
+/* formatação das seções */
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0% 15%;
+    padding: 1%;
+    color: #b16ba6;
+}
+
+/* arredondamento da imagem de perfil */
+img {
+    border-radius: 100%;
+    margin-left: 8%;
+}
+
+/* margens e bordas dos campos de título e texto */
+.titulo, .texto {
+    margin: 1%;
+    padding: 0.5% 3%;
+    border-radius: 20px;
+}
+
+/* cores do fundo e da fonte dos campos de titulo e texto */
+.titulo {
+    background-color: #d998e6;
+    color: #000000;
+}
+
+.titulo:hover {
+    background-color: #b08cb3;
+}
+
+.texto {
+    background-color: rgb(144, 148, 212);
+    color: #000000;
+}
+
+/* transformação da seção "sobre mim" em um flexbox */
+#conteudo_sobre_mim {
+    display: flex;
+    align-items: center;
+}
+
+/* quando a tela for menor que 750px, a imagem ficará embaixo do texto e será maior; 
+a margem do texto/título também mudará */
+@media only screen and (max-width: 750px) {
+    #conteudo_sobre_mim {
+        flex-direction: column;
+    }
+
+    img {
+        width: 60%;
+        margin: 6% 0% 4% 20%;
+    }
+
+    .titulo, .texto {
+        margin: 1%;
+        padding: 1% 4%;
+    }
+}
+
+/* estilização do formulário */
+#formulario {
+    margin: 2% 3%;
+    color:#4e6424;
+}
+
+/* estilização das caixas de inserção de texto */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 70%;
+    padding: 12px 20px;
+    margin: 1% 0;
+    box-sizing: border-box;
+    resize: none;
+    border-style: none;
+}
+
+/* estilização do botão de envio */
+input[type=submit] {
+    width: 15%;
+    padding: 2% 5%;
+    box-sizing: border-box;
+    background-color: rgb(150, 0, 117);
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 200%;
+}
+
+/* quando o mouse estiver em cima do botão, a cor mudará */
+input[type=submit]:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+/* formatação do rodapé */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(255, 95, 194);
+    color:#000000;
+    height: 20%;
+    margin-top: 1%;
+    padding: 1.5%;
+}
